@@ -1,0 +1,39 @@
+#setingsMainBlock{
+  margin-top: 15px;
+  width: 100%;
+  height: 100%;
+  background: #D0D0D0;
+  display: flex;
+}
+
+#mainSettings{
+  border-radius: 4px;
+  background: white;
+  width: 600px;
+  height: 700px;
+}
+
+#miniMenu{
+  border-radius: 4px;
+  margin-left: 10px;
+  background: white;
+  width: 280px;
+  height: 300px;
+}
+
+#miniMenu ul{
+  width: 100%;
+}
+
+#miniMenu li{
+  padding: 10px 0 10px 15px;
+}
+a{
+  text-decoration: none;
+}
+
+
+#miniMenu li:hover{
+  border-left: #656565 solid 2px;
+  background-color: #F1EFEF;
+}

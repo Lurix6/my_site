@@ -1,0 +1,58 @@
+
+li{
+	list-style-type: none;
+}
+
+.root{
+
+	height: 100%;
+	padding: 5px;
+	margin: 3px 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+img, .root{
+	border-radius: 3px;
+
+}
+
+.root > div:first-child{
+	display: flex;
+
+}
+
+img{
+	width: 48px;
+	height: 48px;
+
+}
+
+.list_music_inf{
+	padding-top: 5px;
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.list_music_inf > span:nth-child(2) {
+	color: #a5a5a5;
+}
+
+.list_music_time{
+	align-content: center;
+	position: relative;
+	top: 15px;
+}
+
+.root:hover{
+    background: #d3d3d3;
+}
+
+.list_music_time img{
+	margin-left: 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.material-icons.orange600 { color: #FB8C00; }

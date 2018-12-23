@@ -1,0 +1,300 @@
+.userRoot {
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  margin-top: 10px;
+  background: white;
+  background: white;
+  height: 100%;
+  width: 100%;
+  background: grey;
+  background-color: #d1d1d1;
+}
+
+@media screen and (min-width:600px) {
+  .main_site_body_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+@media screen and (max-width:400px) {
+  .main_site_body_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 0.8em;
+  }
+
+  .my_date > div > div {
+    margin-left: 50px;
+    margin-top: -18px;
+  }
+
+
+
+}
+
+.main_site_body_container > div, .information, .information div{
+	display: flex;
+	align-items: center;
+}
+
+.your_block{
+	width: 100%;
+  height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+@media (max-width: 401) {
+  .avatar{
+  	position: relative;
+  	top: 50px;
+    left: 5px;
+    align-items:baseline;
+  }
+
+
+  .my_date > div > div {
+    background-color: blue;
+    margin-left: 10px;
+    margin-top: -18px;
+  }
+
+
+
+}
+.avatar{
+	position: relative;
+	top: 50px;
+  left: 5px;
+}
+
+
+.avatar img{
+	border-radius: 20px 20px 0 0;
+	width: 200px;
+	height: 200px;
+}
+
+.information{
+	display: flex;
+	flex-direction: column;
+	margin-top: 25px;
+
+}
+
+#inf_text{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 204px;
+	padding: 8px;
+	border: 2px solid #4f837a;
+	border-radius:4px 4px 0 0;
+}
+
+.more_inf{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-right: 10px;
+	margin-left: 40px;
+
+}
+
+
+.more_inf div{
+	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 10px;
+	width: 60px;
+	height: 90px;
+}
+
+.more_inf div p{
+	margin: 5px 0 0 0;
+}
+
+.more_inf div img{
+	width: 35px;
+	height: 35px;
+}
+
+.wall{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.name_and_status{
+  margin-left: 20px;
+	flex-direction: column;
+}
+
+.name{
+	font-size: 30px;
+}
+.status{
+  width: 55px;
+  margin: 10px 0 0 0;
+  padding: 5px;
+  border-radius: 6px;
+  background-color: #00b0b7;
+
+}
+
+.my_date{
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0 0 10px;
+}
+
+.my_date > div{
+	padding:5px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+}
+.my_date > div > div {
+	margin-left: 160px;
+	margin-top: -19px;
+}
+
+
+.about_me{
+	display: flex;
+	flex-direction: column;
+  margin: 45px 0 0 25px;
+	width: 100%;
+}
+
+.private_inf{
+  margin-top: 5px;
+  display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+
+
+@media (max-width: 885px) {
+  .private_inf{
+    flex-direction: column-reverse;
+    }
+    .avatar img{
+      width: 250px;
+      height: 250px;
+    }
+
+  }
+
+
+  @media (max-width: 300px) {
+    .avatar img{
+      width: 190px;
+      height: 190px;
+    }
+
+    .my_date > div > div{
+      margin-left: 105px;
+    }
+  }
+
+.my_rating{
+  font-size: 1.7em;
+  margin-right: 15px;
+	display: flex;
+	padding: 10px;
+  margin-left: 5px;
+}
+
+#rating{
+	display: flex;
+	justify-content: center;
+	margin-left: 10px;
+  height: 32px;
+	width: 40px;
+	border-radius: 8px;
+	background: linear-gradient(to top, #53a7c9, #1d86b4);
+}
+
+
+#show_detail > div{
+	margin: 10px 5px 10px 5px;
+}
+
+#show_detail {
+	margin: 15px 0 15px 0;
+	border-radius: 50px;
+	border-color: #797e84;
+	border-style: solid;
+
+}
+
+.my_music{
+  position: relative;
+  left: 0;
+	width: 100%;
+  flex-direction: column;
+}
+
+#current_music {
+	padding: 10px;
+	margin: 0 20px 0 20px;
+	border-radius: 10px 10px 0 0;
+	display: flex;
+	justify-content: space-between;
+	border: 2px solid white;
+}
+#current_music:hover{
+	background-color: #00b0b7;
+	cursor: pointer;
+}
+
+
+#play_music{
+	margin-right: 5px;
+	width: 18px;
+	height: 18px;
+}
+
+.list_music > div{
+	display: flex;
+	margin: 10px 20px 0 20px;
+}
+
+#author_music{
+	color: #009EB5;
+}
+
+.records_or_all{
+  margin:  10px 20px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userMusicLi{
+  margin: 5px 20px 0 20px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.userMusicLi:hover{
+  background: white;
+}
+
+@media (min-width: 886px) {
+    .avatar img{
+      width: 300px;
+      height: 300px;
+    }
+
+}

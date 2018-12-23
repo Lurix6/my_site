@@ -1,0 +1,42 @@
+
+#root{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 575px;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+#avatar{
+  height: 80px;
+  width: 80px;
+  margin-right: 12px;
+  border-radius:  50%;
+}
+
+#title{
+  color: #2a5885;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#mainBlock{
+  display: flex;
+}
+
+#mainBlock > div{
+  display: flex;
+  flex-direction: column;
+}
+
+#more{
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+}
+
+#subject, #subscribers{
+  padding-top: 5px;
+  color: #656565;
+}

@@ -1,0 +1,10 @@
+li{
+	list-style-type: none;
+}
+
+.about_list{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 5px;
+	font-size: 17px;
+}

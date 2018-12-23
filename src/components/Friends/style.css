@@ -1,0 +1,200 @@
+#friendsMainBlock{
+  border-radius: 3px;
+  margin: 15px 5px 0 ;
+  background-color: #F0F2F4;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#friendsFiltersOne{
+  margin: 0 10px 0 10px;
+  align-items: center;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#friendsFiltersOne > div, .friendElement > div{
+    display: flex;
+}
+
+#findFriends{
+  cursor: pointer;
+  background-color: #00B4BA;
+  color: #fff;
+  border-radius: 4px;
+  padding: 7px 16px 8px 16px;
+  margin-left: 10;
+  border: 0;
+  box-sizing: border-box;
+}
+
+#friendsFiltersOne > div > div{
+  cursor: pointer;
+  padding: 18px 6px;
+  font-size: 16px;
+}
+#friendsFiltersOne > div > div > span{
+  padding-left: 6px;
+  margin-top: 1px;
+  font-size: 15px;
+  color: #939393;
+}
+
+.activeFriends{
+    border-bottom: 2px solid #5181b8;
+}
+
+
+#searchFriendName{
+  height: 17px;
+  margin-left: 20px;
+  display: flex;
+  padding: 14px 0 13px 0px;
+}
+
+#searchFriendName > img{
+  width: 18px;
+  height: 15px;
+}
+
+#searchInputName {
+  width: 100%;
+  margin-left: 10px;
+  background-color: #F0F2F4;
+  border: 0;
+  height: 17px;
+}
+
+#parametersFilters{
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+}
+
+#friendsFiltersTwo{
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.friedsList > ul  {
+  padding: 0 20px;
+}
+
+hr {
+  width: 98%;
+  margin-right: ;
+  background-color: #999999;
+  border: none;
+  height: 1px;
+}
+
+
+.friedsList > ul > li {
+  cursor: auto;
+  padding: 12px 0;
+  width: 100%;
+  height: 100%;
+}
+.friendElement{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.friendAvatar{
+    cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.friendPeronalData{
+  font-size: 15px;
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+
+.friendName{
+  cursor: pointer;
+  margin-bottom: 5px;
+  color: #2a5885;
+  font-weight: 700;
+
+}
+
+.friendName > a{
+  color: #2a5885;
+}
+
+.friendStatus{
+  color: #656565;
+  margin-bottom: 5px;
+}
+
+.sendMessages{
+    cursor: pointer;
+  color: #2a5885;
+}
+
+.more > img{
+    cursor: pointer;
+  padding-top: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.friendTag {
+  display: flex;
+}
+
+.friendTag > div{
+  margin-left: 5px;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 6px;
+  padding: 2px 2px;
+  height: 20px;
+}
+
+
+.familyTag{
+  width: 43px;
+  background-color: #e0ecea;
+  color: #4c7171;
+
+}
+
+.bestFriendTag{
+  background-color: #e8f2dc;
+  color: #37702a;
+}
+
+/*more fitters*/
+
+#moreFilters {
+  display: flex;
+}
+
+#moreFilters div{
+  display: flex;
+  margin: 10px 0 0 10px;
+}
+#moreFilters p{
+  margin-right: 5px;
+}
+#toP{
+  margin-left: 5px;
+}
+
+@media (max-width: 405px) {
+  .friendStatus{
+    display: none;
+  }
+}

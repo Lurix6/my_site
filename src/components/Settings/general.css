@@ -1,0 +1,86 @@
+.settingsTitle{
+  width: 100%;
+}
+
+.settingsTitle > div{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.mainTitle{
+  font-size: 22px;
+  padding: 20px 0 0 20px;
+  height: 40px;
+}
+
+.changeStyle{
+  margin: 15px 0 0 20px;
+  display: flex;
+}
+
+.title{
+  width: 35%;
+}
+
+.buttonSelect{
+  width: 45%;
+}
+
+.buttonSelect button{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+/* Стилі для зміни персональних наддих */
+
+.changePersonalData {
+    display: flex;
+    flex-direction: column;
+}
+
+.changePersonalData div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.changeParametr > div{
+
+  margin: 10px 0 10px 0;
+    width: 25%;
+}
+.changeParametr > div > p{
+    color: #656565;
+    width: 100%;
+    position: relative;
+    text-align: right;
+    padding-right: 5px;
+}
+.changeParametr > input{
+    height: 20px;
+}
+
+.changePersonalData > p:first-child {
+  margin: 15px 0 0 20px;
+}
+
+.selectSex{
+  width: 180px;
+}
+
+.saveChange {
+  width: 150px;
+  background-color: #00AFB6;
+  border-radius: 3px;
+  text-align: center;
+  padding: 7px 16px 8px;
+  cursor: pointer;
+  margin: 20px 25px 0 25px;
+  color: #fff;
+  border: 0;
+  font-size: 15px;
+  margin-bottom: 15px;
+}

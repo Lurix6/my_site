@@ -1,0 +1,43 @@
+
+@media (min-width: 889px) {
+	.menu{
+		font-size: 18px;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		margin: 15px 15px 15px 15px  ;
+		width: 230px;
+		height: 600px;
+	/*	background: #252626;*/
+	}
+}
+
+
+@media (max-width: 888px) {
+	.menu{
+		display: none;
+	}
+}
+
+
+
+a {
+	color:white
+}
+
+.menu div{
+  border-radius: 4px;
+	padding: 10px;
+	width: 200px;
+}
+
+.menu div:hover{
+	background: #242424;
+}
+
+.menu div img{
+	position: relative;
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+}
