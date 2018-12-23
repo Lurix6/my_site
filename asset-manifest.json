@@ -1,14 +1,14 @@
 {
-  "main.css": "/my_site/static/css/main.296a6b8a.chunk.css",
-  "main.js": "/my_site/static/js/main.3e173090.chunk.js",
-  "main.js.map": "/my_site/static/js/main.3e173090.chunk.js.map",
-  "static/js/1.fa92c112.chunk.js": "/my_site/static/js/1.fa92c112.chunk.js",
-  "static/js/1.fa92c112.chunk.js.map": "/my_site/static/js/1.fa92c112.chunk.js.map",
-  "runtime~main.js": "/my_site/static/js/runtime~main.0ccd928b.js",
-  "runtime~main.js.map": "/my_site/static/js/runtime~main.0ccd928b.js.map",
-  "static/media/logo.svg": "/my_site/static/media/logo.5d5d9eef.svg",
-  "static/css/main.296a6b8a.chunk.css.map": "/my_site/static/css/main.296a6b8a.chunk.css.map",
-  "index.html": "/my_site/index.html",
-  "precache-manifest.1ba45030f67bc952affc87b9d8432e5c.js": "/my_site/precache-manifest.1ba45030f67bc952affc87b9d8432e5c.js",
-  "service-worker.js": "/my_site/service-worker.js"
+  "main.css": "/Lurix6/github.io/my_site/static/css/main.296a6b8a.chunk.css",
+  "main.js": "/Lurix6/github.io/my_site/static/js/main.c80a40bb.chunk.js",
+  "main.js.map": "/Lurix6/github.io/my_site/static/js/main.c80a40bb.chunk.js.map",
+  "static/js/1.fa92c112.chunk.js": "/Lurix6/github.io/my_site/static/js/1.fa92c112.chunk.js",
+  "static/js/1.fa92c112.chunk.js.map": "/Lurix6/github.io/my_site/static/js/1.fa92c112.chunk.js.map",
+  "runtime~main.js": "/Lurix6/github.io/my_site/static/js/runtime~main.f2db58bf.js",
+  "runtime~main.js.map": "/Lurix6/github.io/my_site/static/js/runtime~main.f2db58bf.js.map",
+  "static/media/logo.svg": "/Lurix6/github.io/my_site/static/media/logo.5d5d9eef.svg",
+  "static/css/main.296a6b8a.chunk.css.map": "/Lurix6/github.io/my_site/static/css/main.296a6b8a.chunk.css.map",
+  "index.html": "/Lurix6/github.io/my_site/index.html",
+  "precache-manifest.74030832d05925bfd85d239559e8434f.js": "/Lurix6/github.io/my_site/precache-manifest.74030832d05925bfd85d239559e8434f.js",
+  "service-worker.js": "/Lurix6/github.io/my_site/service-worker.js"
 }
