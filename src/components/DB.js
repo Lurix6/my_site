@@ -497,3 +497,27 @@ export const fullMusics = [
 			"full_time": "4:02"
 		}
 ]
+
+export const postImg =
+	{
+		abstractImg: [
+			{img: 'http://img2.badfon.ru/original/1920x1080/f/63/linii-chernyy-goluboy.jpg'},
+			{img: 'https://png.pngtree.com/thumb_back/fw800/back_pic/04/53/31/315861354828da8.jpg'},
+			{img: 'https://images.pexels.com/photos/953214/pexels-photo-953214.jpeg?cs=srgb&dl=backgrounds-blank-blue-953214.jpg&fm=jpg'},
+			{img: 'https://cdn7.dissolve.com/p/D1749_1_012/D1749_1_012_0004_600.jpg'},
+			{img: 'https://png.pngtree.com/thumb_back/fh260/back_pic/00/14/65/3256657136926fa.jpg'},
+			{img: 'https://www.oodlesthemes.com/wp-content/uploads/2017/10/OO1122575-blue-abstract-vector-background-design.jpg'}
+		],
+        gradientImg: [
+            {img: 'https://i.stack.imgur.com/QnYWg.png'},
+            {img: 'https://i2.wp.com/rsc68tambov.ru/wp-content/uploads/2018/02/415329-gradient-background-turquoise.jpg'},
+            {img: 'http://pcvector.net/uploads/posts/2018-02/1517572511_bg-svg-gradient-min.png'},
+            {img: 'https://pixelbox.ru/upload/file/-/16_(4).jpg'},
+            {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHsuNThXlG7wXhry034VOCHMgyzlYZCAvyyhPriiHL1qouMIfYLg'},
+            {img: 'http://baby-mama58.ru/download/blurry_colors-wide.jpg'},
+            {img: 'https://img.fonwall.ru/o/35/zastavka_oboi_fon_tsvet_siniy_16.jpg'},
+            {img: 'https://png.pngtree.com/thumb_back/fh260/back_pic/03/62/05/3357a9869f75893.jpg'},
+        ]
+
+    }
+

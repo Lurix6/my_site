@@ -2,24 +2,21 @@
 
 body{
 	font-family: 'Roboto', sans-serif;
+	margin: 0;
 }
 
 .siteBody{
-	background: black;
+	background: #ECEDEF	;
 	width: 100%;
 }
 
-.siteBody > div {
-	display: flex;
-		width: 100%;
-}
+
 
 
 /*00a8af - color img */
 
 
 .musicBlock{
-	margin: 15px 15px 0 0 ;
 	display: flex;
 	flex-direction: column;
 	width:100%;
@@ -133,4 +130,9 @@ li{
 
 ul{
 	padding-left: 0;
+}
+
+
+#inputNewPostElement{
+	color: white;
 }

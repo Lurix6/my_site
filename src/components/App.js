@@ -7,29 +7,28 @@ import Friends from './Friends'
 import Settings from './Settings'
 import {Route} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {changeSiteStyle, loginMainProfile} from '../AC'
+import {loginMainProfile} from '../AC'
 import Communities from './Communities'
 
 class App extends Component {
 
+  state = {
+    isDrawerOpen: false
+  }
 
   render() {
-    console.log(this.props);
-
     return (
       <div className="block_header">
-        <Header />
+        <Header openDrawer={() => this.setState({isDrawerOpen:true})}/>
       <div className="siteBody">
-        <div>
-            <Menu />
-                <Route exact  path='/profil/id/:id' component={User}/>
+            <Menu isDrawerOpen={this.state.isDrawerOpen}  clouseDrawer={() => this.setState({isDrawerOpen:false})} />
+                <Route path='/profil/id/:id' component={User}/>
                 <Route exact  path='/profil/myProfile' component={User}/>
                 <Route path='/profil/settings' component={Settings}/>
                 <Route path='/profil/music' component={Music}/>
                 <Route path='/profil/friends' component={Friends} />
                 <Route path='/profil/communities' component={Communities} />
 
-        </div>
       </div>
     </div>
 
@@ -41,14 +40,10 @@ class App extends Component {
     if (localStorage.getItem("loginedUser")) {
         this.props.loginMainProfile(JSON.parse(localStorage.getItem("loginedUser")));
     }
-    if (localStorage.getItem(this.props.loginProfil.id)) {
-        this.props.changeSiteStyle(localStorage.getItem(this.props.loginProfil.id))
-
-    }
 
   }
 }
 
 export default connect(state => ({
     loginProfil: state.loginProfil
-}), {changeSiteStyle, loginMainProfile})(App);
+}), {loginMainProfile})(App);

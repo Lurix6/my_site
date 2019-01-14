@@ -1,58 +1,110 @@
-import React from 'react'
-import '../style/header.css'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
+import {blue, orange} from '@material-ui/core/colors';
+import history from '../../history'
 import {connect} from 'react-redux'
-import { logoutMainProfile } from '../../AC'
+import {logoutMainProfile} from '../../AC'
 
- class Header extends React.Component {
 
-  render(){
+const styles = {
+  root: {
+    flexGrow: 1,
+    background:blue[600],
+  },
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
 
-    const style = this.props.loginProfil.siteStyle
+  },
+};
 
-      return (
-      <div className="header" style={style}>
-        <div className="header_section">
-          <div className="logo">
-            LOGO
-          </div>
+class MenuAppBar extends React.Component {
+  state = {
+    anchorEl: null,
 
-        </div>
+  };
 
-        <div className="header_section_half">
-          <div>Update Your rating
-          </div>
-        </div>
 
-        <div className="header_section_two">
-            <div className="header_item headerButton"><Link to='/profil/settings?category=general'><img src="https://www.freeiconspng.com/uploads/settings-icon-16.png" alt=""/></Link></div>
-          <div className="header_item headerButton"><Link to='/'><img onClick={this.clearLoginedProfileInLocalStorage} src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/012_power-512.png" alt=""/></Link></div>
-        </div>
-      </div>
+  handleMenu = event => {
+    this.setState({ anchorEl: event.currentTarget });
+  };
 
-    )
+  handleClose = () => {
+    this.setState({ anchorEl: null });
+  };
 
-  }
   clearLoginedProfileInLocalStorage = () =>{
+    history.push('/')
     localStorage.removeItem('loginedUser');
     this.props.logoutMainProfile()
   }
 
+
+  render() {
+    const { classes, onToggle } = this.props;
+    const { anchorEl } = this.state;
+    const open = Boolean(anchorEl);
+
+    return (
+      <div>
+        <AppBar className={classes.root} position="static" >
+          <Toolbar >
+            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={this.props.openDrawer}  >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" color="inherit" className={classes.grow}>
+              Material UI
+            </Typography>
+              <div>
+                <IconButton
+                  aria-owns={open ? 'menu-appbar' : undefined}
+                  aria-haspopup="true"
+                  onClick={this.handleMenu}
+                  color="inherit"
+                >
+                  <MoreVertIcon />
+                </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  open={open}
+                  onClose={this.handleClose}
+                >
+                  <MenuItem onClick={this.handleClose}>Обновить</MenuItem>
+                  <MenuItem onClick={() => {history.push('/profil/settings?category=general')}}>Помощ</MenuItem>
+                  <MenuItem onClick={this.clearLoginedProfileInLocalStorage}>Вихід</MenuItem>
+
+                </Menu>
+              </div>
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  }
 }
 
-export default connect(state => ({
-  loginProfil : state.loginProfil
-}),{logoutMainProfile})(Header)
+MenuAppBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
-
-
-/*
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/globe-7-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/search-13-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/group-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/joystick-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/star-5-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/start-xxl.png" alt=""/></div>
-          <div className="header_item headerButton"><img src="https://www.iconsdb.com/icons/preview/white/headphones-3-xxl.png" alt=""/>
-        </div>
-*/
+export default connect(null, {logoutMainProfile})(withStyles(styles)(MenuAppBar))
