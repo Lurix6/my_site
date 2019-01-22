@@ -1,9 +1,11 @@
 
 #root{
+  padding-bottom: 5px;
+  padding-top: 5px;
   display: flex;
   justify-content: space-between;
   height: 80px;
-  width: 575px;
+  width: 100%;
   border-bottom: 1px solid #c9c9c9;
 }
 
@@ -30,11 +32,6 @@
   flex-direction: column;
 }
 
-#more{
-  width: 30px;
-  height: 30px;
-  margin-right: 12px;
-}
 
 #subject, #subscribers{
   padding-top: 5px;

@@ -193,23 +193,28 @@ export const communities = [
 		"title":"Европейский Футбол | Ман Юнайтед - Арсенал",
 		"img":"https://pp.userapi.com/c840224/v840224794/66df4/V3HF7hP66r8.jpg?ava=1",
 		"subscribers":["0005", "0003", "0001"],
-		"subject":"Футбол"
+		"subject":"Футбол",
+		"defaultURL": false,
+		"administrators": []
 	},
 	{
 		"url":"italyfootball",
 		"title":"Европейский Футбол | Ман Юнайтед - Арсенал",
 		"img":"https://pp.userapi.com/c847220/v847220632/b9712/IAB1Cf5SUYM.jpg?ava=1",
-		"subscribers":["0006", "0004", "0002"],
-		"subject":"Футбол"
+		"subscribers":["0006", "0004", "0002", '0001'],
+		"subject":"Футбол",
+		"defaultURL": false,
+		"administrators": []
 	},
 	{
 		"url":"worldfbl",
 		"title":"Трансферы",
 		"img":"https://pp.userapi.com/c623231/v623231622/3c809/QUqwUQmZwgk.jpg?ava=1",
-		"subscribers":["0004", "0002", "0001"],
-		"subject":"Футбол"
+		"subscribers":["0004", "0002"],
+		"subject":"Футбол",
+		"defaultURL": false,
+		"administrators": []
 	}
-
 
 ]
 
@@ -501,7 +506,6 @@ export const fullMusics = [
 export const postImg =
 	{
 		abstractImg: [
-			{img: 'http://img2.badfon.ru/original/1920x1080/f/63/linii-chernyy-goluboy.jpg'},
 			{img: 'https://png.pngtree.com/thumb_back/fw800/back_pic/04/53/31/315861354828da8.jpg'},
 			{img: 'https://images.pexels.com/photos/953214/pexels-photo-953214.jpeg?cs=srgb&dl=backgrounds-blank-blue-953214.jpg&fm=jpg'},
 			{img: 'https://cdn7.dissolve.com/p/D1749_1_012/D1749_1_012_0004_600.jpg'},
@@ -520,4 +524,3 @@ export const postImg =
         ]
 
     }
-

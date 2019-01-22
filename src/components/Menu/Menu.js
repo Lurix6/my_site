@@ -23,7 +23,6 @@ class AppDrawer extends React.Component{
 
   render(){
     const { isDrawerOpen, clouseDrawer }  = this.props
-    console.log(history);
     const { classes } = this.props
       return(
         <Drawer

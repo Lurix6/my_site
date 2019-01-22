@@ -1,23 +1,26 @@
 import React from 'react'
 import './communitiElement.css'
+import Icon from '@material-ui/core/Icon';
+import history from '../../history'
 
 
 class communitiElement extends React.Component {
 
 	    render(){
+				const element = this.props.element
 
 	        return (
-                <div id='root'>
+                <div id='root' style={{zIndex: '1'}} >
                     <div id='mainBlock'>
-                        <img alt="" id='avatar' src="https://pp.userapi.com/c840224/v840224794/66df3/2X83zEgJptY.jpg?ava=1" />
+                        <img alt="" id='avatar' src={element.img} />
                         <div >
-                            <div id='title' onClick={this.props.handleUpdate} >Европейский Футбол | Ман Юнайтед - Арсенал</div>
-                            <div id='subject'>Футбол</div>
-                            <div id='subscribers'>1 415 702 підписники</div>
+                            <div id='title' >{element.title}</div>
+                            <div id='subject'>{element.subject}</div>
+                            <div id='subscribers'>{element.subscribers.length} підписники</div>
                         </div>
                     </div>
-                    <div>
-                      <img alt="" id='more' src='/assets/img/music/more1.png' />
+                    <div style={{margin: '12px'}} >
+                    	<Icon fontSize='large' >more_horiz</Icon>
                     </div>
         	      </div>
 

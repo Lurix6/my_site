@@ -7,7 +7,6 @@ class Search extends React.Component{
 
       return  <div className="search">
                 <input type="text"
-                  id="audio_search"
                   placeholder="Пошук за музикою"
                   onChange={this.handleUserChange}
                   />

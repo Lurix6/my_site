@@ -9,6 +9,7 @@ import friendsFilter from './friends/filter'
 import selectedFriend from './friends/selectedFriend'
 import loginProfil from './profile/login'
 import communities from './communities/fullList'
+import filters from './filters'
 
 export default combineReducers({
     musics: songs,
@@ -16,5 +17,5 @@ export default combineReducers({
     search, noveltySongs,
     accounts, allMusic,
     selectedFriend, friendsFilter,
-    loginProfil,communities
+    loginProfil,communities, filters
 })

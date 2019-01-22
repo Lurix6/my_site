@@ -1,10 +1,12 @@
 import {createSelector} from 'reselect'
+import {mapToArr} from '../helper/'
 
 const musicsGetter = state => state.musics
 const searchDate = state => state.search
 const allFriends = state => state.accounts
 const friendsFilter = state => state.friendsFilter
-
+const groupsGetter = state => mapToArr(state.communities)
+const filterGroup = state =>  state.filters
 
 
 export const filterSearchMusics = createSelector(musicsGetter, searchDate, (musics, search) => {
@@ -13,6 +15,13 @@ export const filterSearchMusics = createSelector(musicsGetter, searchDate, (musi
     return result
 
 } )
+
+export const filterGroupByTitle = createSelector(groupsGetter, filterGroup, (groups, search) => {
+    const result = groups.filter(element =>
+       element.title.toUpperCase().includes(search.communities.title.toUpperCase()))
+    return result
+
+})
 
 
 export const filterActiveFriends = createSelector(allFriends,friendsFilter ,(friends, filter) => {

@@ -13,12 +13,19 @@ import {blue, orange} from '@material-ui/core/colors';
 import history from '../../history'
 import {connect} from 'react-redux'
 import {logoutMainProfile} from '../../AC'
+import { fade } from '@material-ui/core/styles/colorManipulator'
+import InputBase from '@material-ui/core/InputBase';
+import SearchIcon from '@material-ui/icons/Search';
 
 
-const styles = {
+
+
+const styles = theme => ({
+  toolbarRoot:{
+    justifyContent: 'space-between'
+  },
   root: {
-    flexGrow: 1,
-    background:blue[600],
+    width: '100%',
   },
   grow: {
     flexGrow: 1,
@@ -26,9 +33,53 @@ const styles = {
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
-
   },
-};
+  title: {
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
+  },search: {
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: fade(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: fade(theme.palette.common.white, 0.25),
+    },
+    marginRight: theme.spacing.unit * 2,
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing.unit * 3,
+      width: 'auto',
+    },
+  },
+  searchIcon: {
+    width: theme.spacing.unit * 9,
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  inputRoot: {
+    color: 'inherit',
+    width: '100%',
+  },
+  inputInput: {
+    paddingTop: theme.spacing.unit,
+    paddingRight: theme.spacing.unit,
+    paddingBottom: theme.spacing.unit,
+    paddingLeft: theme.spacing.unit * 10,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: 200,
+    },
+  },
+
+})
 
 class MenuAppBar extends React.Component {
   state = {
@@ -60,14 +111,26 @@ class MenuAppBar extends React.Component {
     return (
       <div>
         <AppBar className={classes.root} position="static" >
-          <Toolbar >
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={this.props.openDrawer}  >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" color="inherit" className={classes.grow}>
-              Material UI
-            </Typography>
-              <div>
+          <Toolbar  >
+              <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={this.props.openDrawer}  >
+                <MenuIcon />
+              </IconButton>
+              <Typography variant="h6" color="inherit">
+                Material UI
+              </Typography>
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
+                </div>
+                <InputBase
+                  placeholder="Search…"
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                />
+            </div>
+              <div style={{position: 'absolute', right: '15px'}} >
                 <IconButton
                   aria-owns={open ? 'menu-appbar' : undefined}
                   aria-haspopup="true"
@@ -77,6 +140,7 @@ class MenuAppBar extends React.Component {
                   <MoreVertIcon />
                 </IconButton>
                 <Menu
+                 className={classes.grow}
                   id="menu-appbar"
                   anchorEl={anchorEl}
                   anchorOrigin={{
