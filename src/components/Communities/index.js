@@ -1,6 +1,10 @@
 import React from 'react'
 import SimpleTabs from './SimpleTabs'
 import './style.css'
+import CommunityPage from './CommunityPage'
+import { Switch, Route } from 'react-router'
+
+
 
 class Communities extends React.Component {
 
@@ -8,8 +12,12 @@ class Communities extends React.Component {
 
     return (
         <div id='communitiesMainBlock'>
-          <SimpleTabs >
-          </SimpleTabs>
+        <Switch>
+          <Route exact path='/profil/communities/' component={SimpleTabs} />
+          <Route path='/profil/communities/:communitie' component={CommunityPage} />
+
+
+        </Switch>
         </div>
     );
   }

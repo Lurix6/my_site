@@ -191,11 +191,11 @@ export const communities = [
 	{
 		"url":"eurofoot",
 		"title":"Европейский Футбол | Ман Юнайтед - Арсенал",
-		"img":"https://pp.userapi.com/c840224/v840224794/66df4/V3HF7hP66r8.jpg?ava=1",
+		"img":"https://i.pinimg.com/originals/36/97/e1/3697e12e0bf10c82a24861d439c4e2ed.jpg",
 		"subscribers":["0005", "0003", "0001"],
 		"subject":"Футбол",
 		"defaultURL": false,
-		"administrators": []
+		"administrators": ['0001']
 	},
 	{
 		"url":"italyfootball",
@@ -204,7 +204,7 @@ export const communities = [
 		"subscribers":["0006", "0004", "0002", '0001'],
 		"subject":"Футбол",
 		"defaultURL": false,
-		"administrators": []
+		"administrators": ['0001']
 	},
 	{
 		"url":"worldfbl",
@@ -213,7 +213,7 @@ export const communities = [
 		"subscribers":["0004", "0002"],
 		"subject":"Футбол",
 		"defaultURL": false,
-		"administrators": []
+		"administrators": ['0002']
 	}
 
 ]

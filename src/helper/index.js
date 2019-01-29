@@ -9,3 +9,11 @@ export function arrToMap(arr, RecordModel) {
 export function mapToArr(map) {
   return map.valueSeq().toArray()
 }
+
+
+export function toObject(arr) {
+  var rv = {};
+  for (var i = 0; i < arr.length; ++i)
+    if (arr[i] !== undefined) rv[i] = arr[i];
+  return rv;
+}
