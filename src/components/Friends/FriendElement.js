@@ -8,8 +8,6 @@ class FriendElement extends React.Component {
 
 	    render(){
 				const {element} = this.props
-
-
 	        return (
               <div className='friendElement'>
                   <div>

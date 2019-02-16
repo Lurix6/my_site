@@ -1,23 +1,21 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import { mapToArr } from '../../helper/'
 import AccountMusicElement from './NewPostElement'
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Icon from '@material-ui/core/Icon'
 import Button from '@material-ui/core/Button';
+import Moment from 'react-moment';
 import Divider from '@material-ui/core/Divider'
-import MediaQuery from 'react-responsive'
 import GridList from '@material-ui/core/GridList';
 import Avatar from '@material-ui/core/Avatar';
 import InputBase from '@material-ui/core/InputBase';
-import CardMedia from '@material-ui/core/CardMedia'
+import Style from 'style-it';
+import Post from './Post'
 import NewPostElement from './NewPostElement'
-
-
-
-
-import './style.css'
+import { postImg } from '../DB'
 
 const styles = theme => ({
   root: {
@@ -147,29 +145,42 @@ class App extends Component {
       basicInf: false,
       education: false,
       personalInf: false,
-      addNewPost: {
-          poster: false
-      }
     }
+  }
+
+  fillListImg = () => {
+      let list = []
+
+      for (let i = 0; i < postImg.abstractImg.length; i++) {
+          list[list.length] = {img : postImg.abstractImg[i].img,name : 'abstract', index: i}
+      }
+      for (let i = 0; i < postImg.gradientImg.length; i++) {
+          list[list.length] = {img : postImg.gradientImg[i].img, name : 'gradient', index: list.length}
+      }
+      for (let i = 0; i < postImg.emotionsImg.length; i++) {
+          list[list.length] = {img : postImg.emotionsImg[i].img, name : 'emotions', index: list.length}
+      }
+      return list
+
   }
 
 
   render(){
-
-
     const location = this.props.location
+
     if (location.pathname === "/profil/myProfile") {
       selectedAccount = this.props.mainProfile
     }else {
       selectedAccount = this.getAccountById(location)    }
     const { classes } = this.props;
-    let selectedAccount , padding = classes.padding15
+    let selectedAccount
+
 
     return (
         <div className={classes.root}>
             <div className={classes.left_block}>
                 <Paper  className={classes.paper}>
-                  <img className={classes.avatar_img} src={selectedAccount.img} />
+                  <img className={classes.avatar_img} alt='avatar' src={selectedAccount.img} />
                   <div className={classes.root2}>
                       <Button variant="contained" color="primary" className={classes.button}>
                           Редагувати
@@ -180,7 +191,7 @@ class App extends Component {
                 <Paper className={classes.paper + ' '+ classes.root2}>
                     <div className={classes.paper_row}>
                         <Icon className={classes.iconPaddingringt+ ' '+ classes.iconHover + ' ' + classes.mainStyleColor}>cake</Icon>
-                        <Typography variant="p" component="p" className={classes.typography}>
+                        <Typography >
                             Укажіть дату народження
                         </Typography>
                     </div>
@@ -209,7 +220,7 @@ class App extends Component {
                             <Typography className={classes.typographyPaddyngRight} component="p">
                                 День народження:
                             </Typography>
-                            <Typography component="p">
+                            <Typography variant="inherit">
                                 {selectedAccount.personalDate.birthday}
                             </Typography>
                         </div>
@@ -217,7 +228,7 @@ class App extends Component {
                             <Typography className={classes.typographyPaddyngRight} component="p">
                                 Мiсто:
                             </Typography>
-                            <Typography component="p">
+                            <Typography variant="inherit">
                                 {selectedAccount.personalDate.city}
                             </Typography>
                         </div>
@@ -234,7 +245,7 @@ class App extends Component {
                                 <Typography className={classes.typographyTextAligenCenter + ' ' + classes.mainStyleColor} variant="h6">
                                     183
                                 </Typography>
-                                <Typography variant="p" >
+                                <Typography variant="subheading" >
                                     Друзів
                                 </Typography>
                             </div>
@@ -242,7 +253,7 @@ class App extends Component {
                                 <Typography className={classes.typographyTextAligenCenter + ' ' + classes.mainStyleColor} variant="h6">
                                     131
                                 </Typography>
-                                <Typography variant="p">
+                                <Typography variant="inherit">
                                     Підписники
                                 </Typography>
                             </div>
@@ -250,7 +261,7 @@ class App extends Component {
                                 <Typography className={classes.typographyTextAligenCenter + ' ' + classes.mainStyleColor} variant="h6">
                                     86
                                 </Typography>
-                                <Typography variant="p">
+                                <Typography variant="inherit">
                                     Фотографії
                                 </Typography>
                             </div>
@@ -258,7 +269,7 @@ class App extends Component {
                                 <Typography className={classes.typographyTextAligenCenter + ' ' + classes.mainStyleColor} variant="h6">
                                     0
                                 </Typography>
-                                <Typography variant="p">
+                                <Typography variant="inherit">
                                     Позначок
                                 </Typography>
                             </div>
@@ -266,7 +277,7 @@ class App extends Component {
                                 <Typography className={classes.typographyTextAligenCenter + ' ' + classes.mainStyleColor} variant="h6">
                                     163
                                 </Typography>
-                                <Typography variant="p">
+                                <Typography variant="inherit">
                                     Відеозаписів
                                 </Typography>
                             </div>
@@ -281,20 +292,19 @@ class App extends Component {
                             <Typography  color='textPrimary'>
                                 Мої фотографії
                             </Typography>
-                            <Typography variant='h7'>_{selectedAccount.musicList.length}</Typography>
+                            <Typography variant='h6'>_{selectedAccount.musicList.length}</Typography>
                         </div>
-                        <Typography component="p" >
+                        <Typography variant="inherit" >
                            Показати на мапі
                         </Typography>
                     </div>
                     <div className={classes.gridRootoot}>
-                        <GridList className={classes.gridList  } style={{justifyContent: 'center'}}  cols='4.2'>
+                        <GridList className={classes.gridList} style={{justifyContent: 'center'}}  cols='4.2'>
 
                             <img src={selectedAccount.img} alt={selectedAccount.firstName + ' ' + selectedAccount.lastName} />
                             <img src={selectedAccount.img} alt={selectedAccount.firstName + ' ' + selectedAccount.lastName} />
                             <img src={selectedAccount.img} alt={selectedAccount.firstName + ' ' + selectedAccount.lastName} />
                             <img src={selectedAccount.img} alt={selectedAccount.firstName + ' ' + selectedAccount.lastName} />
-
 
                         </GridList>
                     </div>
@@ -304,37 +314,32 @@ class App extends Component {
 
 
                 <Paper style={{marginTop: '8px'}}>
-                    {this.state.addNewPost.poster ?
-
-                            <NewPostElement selectedAccount={selectedAccount}  classes={classes} />
-                        : null}
-                    <div className={classes.paper + ' ' + classes.paper_row}>
-
-                        <Avatar alt="Remy Sharp" src={selectedAccount.img} className={classes.avatar} />
-                        <InputBase className={classes.input} placeholder="Що у вас нового?" fullWidth />
-                        <div className={classes.paper_row}>
-                            <Icon className={classes.iconPaddingringt+ ' '+ classes.iconHover + ' ' + classes.mainStyleColor}>photo_camera</Icon>
-                            <Icon className={classes.iconPaddingringt+ ' '+ classes.iconHover + ' ' + classes.mainStyleColor}>local_movies</Icon>
-                            <Icon className={classes.iconPaddingringt+ ' '+ classes.iconHover + ' ' + classes.mainStyleColor}>library_music</Icon>
-                            <Icon className={classes.iconPaddingringt+ ' '+ classes.iconHover + ' ' + classes.mainStyleColor}>notes</Icon>
-                        </div>
-                        <div style={{paddingLeft: '20px', borderLeft: '1px solid #e7e8ec',  marginLeft:'10px'}} onClick={() => {this.setState({addNewPost:{poster: !this.state.addNewPost.poster} })} }>
-                            <div style={{width:'24px', height:'24px', borderRadius: '50%'}}>
-                                <img src='https://vk.com/images/poster/color_button_20.png' style={{width:'24px', height:'24px', zIndex: 2}} />
-                            </div>
-                        </div>
-
-                    </div>
-
+                   <NewPostElement selectedAccount={selectedAccount} fillListImg={this.fillListImg()}/>
                 </Paper>
+                {selectedAccount.posts.length > 0 ?
+                  <div>
+                      {this.getAllPosts(selectedAccount)}
+                  </div>
 
-
-
+                : null
+                }
             </div>
         </div>
 
     );
   }
+
+
+  getAllPosts = (selectedAccount) => {
+      return  selectedAccount.posts.map(el => <Post key={el.id} post={el} selectedAccount={selectedAccount} />)
+
+
+  }
+
+
+
+
+
 
 
   getMoreInf = (selectedAccount, classes) => {
@@ -396,7 +401,7 @@ class App extends Component {
                               Групи:
                           </Typography>
                           <Typography component="p" className={classes.paper_row }  style={{flexWrap:'wrap'}}>
-                              {selectedAccount.musicList.map(el =>  <Typography variant='h8'>{el},</Typography>)}
+                              {selectedAccount.musicList.map(el =>  <Typography variant='subheading' key={el}>{el},</Typography>)}
                           </Typography>
                       </div>
                   </div>
@@ -411,7 +416,7 @@ class App extends Component {
   }
 
   getAccountById = (location) => {
-      if (location.pathname === '/profil/my') {
+      if (location.pathname === '/profil/myP') {
           return this.props.mainProfile
       }
       const id = location.pathname.replace('/profil/id/', '')
@@ -423,7 +428,7 @@ class App extends Component {
 
   showMusicList = (account) => {
     if (this.state.moreMusic) {
-      return account.musicList.map(element => <li className="userMusicLi" key={element}><AccountMusicElement element={element} key={element} /></li>)
+      return account.musicList.map(element => <li className="userMusicLi" key={element}><AccountMusicElement element={element} /></li>)
     }else {
       return this.getFirstThreeElement(account.musicList).map(element => <li className="userMusicLi" key={element}><AccountMusicElement element={element} /> </li>)
     }
@@ -451,7 +456,6 @@ class App extends Component {
 }
 
 export default connect(state => ({
-  selectedFriend : state.selectedFriend,
   mainProfile: state.loginProfil,
-  allProfile: state.accounts
+  allProfile: mapToArr(state.accounts)
 })) (withStyles(styles)(App));

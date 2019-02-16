@@ -1,5 +1,5 @@
 export const Profils = [
-{
+ {
 	id:'0000',
 	email:'vasyapopovich23@gmai.com',
 	password:'123456789',
@@ -19,7 +19,20 @@ export const Profils = [
 		age: 21,
 		sex: 'male'
 	},
-	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206']
+	posts: [],
+  photo:[
+    {img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Larry_Fitzgerald_catches_TD_at_2009_Pro_Bowl.jpg/1200px-Larry_Fitzgerald_catches_TD_at_2009_Pro_Bowl.jpg'},
+    {img: 'https://cdn.vox-cdn.com/thumbor/d4W1yeSVwtAKDP2yPLSqynkqv00=/0x108:2880x2028/1200x800/filters:focal(0x108:2880x2028)/cdn.vox-cdn.com/uploads/chorus_image/image/46756014/0715_USA-FRA_SocMed07.0.0.jpg'},
+    {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2S59b7-srvEYuJcoL9X5otD6zSr8EjxzAsLB7nn3wQ72VxwLQ'},
+    {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2zMrWc5f9wNDEi3fWK1JusXvS8AXIPBwQ7VylHi8xBNa2FRu-jw'},
+    {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDztDDv4xxTnPf5sTPikzRJHQ6TUTfIJwMoShDqd-ihXSXEfA7'},
+    {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4huxSef1CodEtDRS4nq609y31nV2BQHpXG-6mx3sYM6Iqtldl2Q'},
+    {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4huxSef1CodEtDRS4nq609y31nV2BQHpXG-6mx3sYM6Iqtldl2Q'},
+    {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4huxSef1CodEtDRS4nq609y31nV2BQHpXG-6mx3sYM6Iqtldl2Q'},
+    {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4huxSef1CodEtDRS4nq609y31nV2BQHpXG-6mx3sYM6Iqtldl2Q'},
+
+  ],
+	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206'],
 },{
 	id:'0001',
 	email:'pashaIgnat@gmail.com',
@@ -39,6 +52,8 @@ export const Profils = [
 		age: 24,
 		sex: 'male'
 	},
+	posts: [],
+  photo:[],
 	musicList: ['d700e2f880e148ada756061309017d33','d6121560c687494896e74ab39522a871','eb328530519540e4b5f15827d0c11afe','c4fa87628b364114847f8b7f6cf0194c']
 },{
 	id:'0002',
@@ -59,6 +74,8 @@ export const Profils = [
 		age: 27,
 		sex: 'male'
 	},
+	posts: [],
+  photo:[],
 	musicList: ['56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206','wd14eut1kt','r53ht09e21','x50g14r080']
 },{
 	id:'0003',
@@ -79,6 +96,8 @@ export const Profils = [
 		age: 17,
 		sex: 'male'
 	},
+	posts: [],
+  photo:[],
 	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f197fe2bad471b3740','d700e2f880e148ada756061309017d33','723767e78d4a40f5b254eda77eae0ac6','d6121560c687494896e74ab39522a871','c4fa87628b364114847f8b7f6cf0194c','203318a9d82f4bd1816472d961e2d24d']
 },{
 	id:'0004',
@@ -99,6 +118,7 @@ export const Profils = [
 		age: 22,
 		sex: 'male'
 	},
+	posts: [],
 	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206']
 },{
 	id:'0005',
@@ -120,6 +140,8 @@ export const Profils = [
 		age: 20,
 		sex: 'male'
 	},
+	posts: [],
+  photo:[],
 	musicList: ['56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206','wd14eut1kt','r53ht09e21','x50g14r080']
 },{
 	id:'0006',
@@ -141,6 +163,8 @@ export const Profils = [
 		age: 13,
 		sex: 'female'
 	},
+	posts: [],
+  photo:[],
 	musicList: ['56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782fghgfc2c3268ddb3206','kwu3kzt2db']
 },{
 	id:'0007',
@@ -161,6 +185,8 @@ export const Profils = [
 		age: 17,
 		sex: 'female'
 	},
+	posts: [],
+  photo:[],
 	musicList: ['56c782f197fe2bad471b3740','wd14eut1kt','kwu3kzt2db','d6121560c687494896e74ab39522a871','6b554e1b97e2487ca692622ba588f5f7']
 },
 ]
@@ -184,6 +210,8 @@ export const selectedFriend = {
 		birthday:'12 червень 2006',
 		age: 13
 	},
+	posts:[],
+  photo:[],
 	musicList: ['56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782fghgfc2c3268ddb3206','kwu3kzt2db']
 }
 
@@ -512,15 +540,28 @@ export const postImg =
 			{img: 'https://png.pngtree.com/thumb_back/fh260/back_pic/00/14/65/3256657136926fa.jpg'},
 			{img: 'https://www.oodlesthemes.com/wp-content/uploads/2017/10/OO1122575-blue-abstract-vector-background-design.jpg'}
 		],
-        gradientImg: [
-            {img: 'https://i.stack.imgur.com/QnYWg.png'},
-            {img: 'https://i2.wp.com/rsc68tambov.ru/wp-content/uploads/2018/02/415329-gradient-background-turquoise.jpg'},
-            {img: 'http://pcvector.net/uploads/posts/2018-02/1517572511_bg-svg-gradient-min.png'},
-            {img: 'https://pixelbox.ru/upload/file/-/16_(4).jpg'},
-            {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHsuNThXlG7wXhry034VOCHMgyzlYZCAvyyhPriiHL1qouMIfYLg'},
-            {img: 'http://baby-mama58.ru/download/blurry_colors-wide.jpg'},
-            {img: 'https://img.fonwall.ru/o/35/zastavka_oboi_fon_tsvet_siniy_16.jpg'},
-            {img: 'https://png.pngtree.com/thumb_back/fh260/back_pic/03/62/05/3357a9869f75893.jpg'},
-        ]
+    gradientImg: [
+        {img: 'https://i.stack.imgur.com/QnYWg.png'},
+        {img: 'https://i2.wp.com/rsc68tambov.ru/wp-content/uploads/2018/02/415329-gradient-background-turquoise.jpg'},
+        {img: 'http://pcvector.net/uploads/posts/2018-02/1517572511_bg-svg-gradient-min.png'},
+        {img: 'https://pixelbox.ru/upload/file/-/16_(4).jpg'},
+        {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHsuNThXlG7wXhry034VOCHMgyzlYZCAvyyhPriiHL1qouMIfYLg'},
+        {img: 'http://baby-mama58.ru/download/blurry_colors-wide.jpg'},
+        {img: 'https://img.fonwall.ru/o/35/zastavka_oboi_fon_tsvet_siniy_16.jpg'},
+        {img: 'https://png.pngtree.com/thumb_back/fh260/back_pic/03/62/05/3357a9869f75893.jpg'},
+    ],
+		emotionsImg:[
+				{img: 'https://vk.com/uploads/images/poster/bkg_26_main_720.jpg'},
+				{img: 'https://vk.com/uploads/images/poster/bkg_21_main_720.jpg'},
+				{img: 'https://vk.com/uploads/images/poster/bkg_28_main_720.jpg'},
+				{img: 'https://vk.com/uploads/images/poster/bkg_22_main_720.jpg'},
+				{img: 'https://vk.com/uploads/images/poster/bkg_24_main_720.jpg'},
+				{img: 'https://vk.com/uploads/images/poster/bkg_25_main_720.jpg'},
+				{img: 'https://vk.com/uploads/images/poster/bkg_36_main_720.jpg'},
+				{img: 'https://vk.com/uploads/images/poster/bkg_35_main_720.jpg'},
+				{img: 'https://vk.com/uploads/images/poster/bkg_30_main_720.jpg'},
+				{img: 'https://vk.com/uploads/images/poster/bkg_29_main_720.jpg'},
+				{img: 'https://vk.com/uploads/images/poster/bkg_23_main_720.jpg'},
+		]
 
     }

@@ -3,6 +3,7 @@ import FriendElement from './FriendElement'
 import {connect} from 'react-redux'
 import {filterActiveFriends} from '../../selectors'
 import {changeFilterFriends, clearAllFilter} from '../../AC'
+import { mapToArr } from '../../helper'
 import './style.css'
 
 class Friends extends Component {
@@ -133,6 +134,6 @@ class Friends extends Component {
 
 export default connect(state => ({
   friensList : filterActiveFriends(state),
-  allFriends : state.accounts,
+  allFriends : mapToArr(state.accounts),
   friendFilter : state.friendsFilter
 }), {changeFilterFriends, clearAllFilter})(Friends)

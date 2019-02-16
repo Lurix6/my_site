@@ -9,7 +9,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import {blue, orange} from '@material-ui/core/colors';
 import history from '../../history'
 import {connect} from 'react-redux'
 import {logoutMainProfile} from '../../AC'
@@ -104,7 +103,7 @@ class MenuAppBar extends React.Component {
 
 
   render() {
-    const { classes, onToggle } = this.props;
+    const { classes } = this.props;
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
 

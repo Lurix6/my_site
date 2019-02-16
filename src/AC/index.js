@@ -2,7 +2,10 @@ import {DELETE_MUSIC_ELEMENT, CHANGE_CARENT_MUSIC, SEARCH_MUSICS,
   ADD_NEW_MUSIC_IN_MY_LIST, CHANGE_SELECTED_FRIEND,
   CHANGE_FILTERS_FRIEND, LOGIN_MAIN_PROFILE,
   CHANGE_CURENT_MUSIC_CATEGORY, CHANGE_SITE_STYLE,
-  CHANGE_PRIVATE_DATA_MAIN_PROFILE, CLEAR_ALL_FILTER, LOGOUT_MAIN_PROFILE, SEARCH_COMMUNITIES_TITLE, ADD_NEW_COMMUNITIE} from '../constants'
+  CHANGE_PRIVATE_DATA_MAIN_PROFILE, CLEAR_ALL_FILTER,
+  LOGOUT_MAIN_PROFILE, SEARCH_COMMUNITIES_TITLE,
+  ADD_NEW_COMMUNITIE, DELETE_SELECTED_POST,
+  ADD_NEW_POST_TO_PROFILE, LIKE_SELECTED_POST} from '../constants'
 
 
 export function deleteMusicElement(id){
@@ -63,7 +66,6 @@ export function logoutMainProfile(){
 }
 
 
-
 export function changePrivateDataMainProfile(props){
   return{
     type: CHANGE_PRIVATE_DATA_MAIN_PROFILE,
@@ -88,5 +90,26 @@ export function addNewCommunitie(communitie){
   return{
     type: ADD_NEW_COMMUNITIE,
     payload: {communitie}
+  }
+}
+
+export function addNewPost(post){
+  return{
+    type: ADD_NEW_POST_TO_PROFILE,
+    payload: {post}
+  }
+}
+
+export function deleteSelectedPost(date){
+  return{
+    type: DELETE_SELECTED_POST,
+    payload: {date}
+  }
+}
+
+export function likeSelectedPost(date){
+  return{
+    type: LIKE_SELECTED_POST,
+    payload: {date}
   }
 }

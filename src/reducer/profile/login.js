@@ -1,5 +1,6 @@
 import {LOGIN_MAIN_PROFILE, CHANGE_SITE_STYLE,
-  CHANGE_PRIVATE_DATA_MAIN_PROFILE, LOGOUT_MAIN_PROFILE} from '../../constants'
+  CHANGE_PRIVATE_DATA_MAIN_PROFILE,
+  LOGOUT_MAIN_PROFILE} from '../../constants'
 
   const defaultLogin ={
   	id:'0000',
@@ -21,16 +22,19 @@ import {LOGIN_MAIN_PROFILE, CHANGE_SITE_STYLE,
   		age: 21,
   		sex: 'male'
   	},
+    posts: [],
+    photo:[
+      {img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Larry_Fitzgerald_catches_TD_at_2009_Pro_Bowl.jpg/1200px-Larry_Fitzgerald_catches_TD_at_2009_Pro_Bowl.jpg'},
+      {img: 'https://cdn.vox-cdn.com/thumbor/d4W1yeSVwtAKDP2yPLSqynkqv00=/0x108:2880x2028/1200x800/filters:focal(0x108:2880x2028)/cdn.vox-cdn.com/uploads/chorus_image/image/46756014/0715_USA-FRA_SocMed07.0.0.jpg'},
+      {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2S59b7-srvEYuJcoL9X5otD6zSr8EjxzAsLB7nn3wQ72VxwLQ'},
+      {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2zMrWc5f9wNDEi3fWK1JusXvS8AXIPBwQ7VylHi8xBNa2FRu-jw'},
+      {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDztDDv4xxTnPf5sTPikzRJHQ6TUTfIJwMoShDqd-ihXSXEfA7'},
+      {img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4huxSef1CodEtDRS4nq609y31nV2BQHpXG-6mx3sYM6Iqtldl2Q'}
+    ],
   	musicList: ['56c782f18990ecf954f6e027','56c782f17b4e0ba78c7ad717','56c782f1978fdf9a0100df52','56c782f1e17f4f9311dfaa2c','56c782f197fe2bad471b3740','56c782f1a2c2c3268ddb3206','56c782fghgfc2c3268ddb3206']
 
   }
 
-
-  /*{
-    email: null,
-    password:null,
-    buttonActive: false
-  }*/
 
 export default ( loginState = defaultLogin , action) => {
     const {type, payload} = action

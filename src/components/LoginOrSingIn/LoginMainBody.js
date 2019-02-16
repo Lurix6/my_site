@@ -2,7 +2,8 @@ import React from 'react'
 import {withRouter,Link} from 'react-router-dom'
 import {loginMainProfile} from '../../AC'
 import {connect} from 'react-redux'
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
+import { mapToArr } from '../../helper'
 import DatePickers from './DatePickers'
 import RadioButtons from './RadioButtons'
 
@@ -189,5 +190,5 @@ class LoginMainBody extends React.Component {
 }
 
 export default connect(state =>({
-		allProfile : state.accounts
+		allProfile : mapToArr(state.accounts)
 }),{loginMainProfile})(withRouter(LoginMainBody))

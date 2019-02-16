@@ -11,18 +11,10 @@ import Popper from '@material-ui/core/Popper';
 import Grid from '@material-ui/core/Grid';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Collapse from '@material-ui/core/Collapse';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
 import Icon from '@material-ui/core/Icon';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import StarBorder from '@material-ui/icons/StarBorder';
 import Divider from '@material-ui/core/Divider';
 import Avatar from '@material-ui/core/Avatar'
 import Style from 'style-it';
@@ -122,7 +114,7 @@ class CommunityPage extends React.Component {
               <div style={{display: 'flex', flexDirection: 'column' , width: '25%'}}>
               <Paper className={classes.rootPater} elevation={1}>
                 <div>
-                  <img className={classes.avaterIMG} src={community.img} />
+                  <img className={classes.avaterIMG} alt='avatar' src={community.img} />
                   <div className={classes.signDiv}>
                      <Button
                       fullWidth
@@ -224,7 +216,7 @@ class CommunityPage extends React.Component {
                       </div>
                       <Grid container direction='column' style={{marginTop: '3px'}} spacing={24}>
                         <Grid container direction='row' item xs={24}>
-                          <Grid item justify='center' xs={4}>
+                          <Grid container item justify='center' xs={4}>
                               <div className={classes.avaterSubscriber}>
                                 <Avatar alt="Remy Sharp" src={community.img} className={classes.avaterSubscriberImg} />
                                 <Typography >

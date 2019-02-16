@@ -18,9 +18,9 @@ class CurentMusic extends React.Component{
                   onEnded
                   // muted
               />
-                <div id="about_current_music">
-                  <img alt="music albom" src={musicElement.icon === null ? "https://cdn4.iconfinder.com/data/icons/devine_icons/Black/PNG/File%20Types/MP3.png" : musicElement.icon}   />
-                    <div>
+                <div style={{display: 'flex'}}>
+                  <img style={{width:'48px', height: '48px'}} alt="music albom" src={musicElement.icon === null ? "https://cdn4.iconfinder.com/data/icons/devine_icons/Black/PNG/File%20Types/MP3.png" : musicElement.icon}   />
+                    <div style={{paddingLeft: '8px'}}>
                         <p>{musicElement.title}</p>
                         <p>{musicElement.executor}</p>
                     </div>

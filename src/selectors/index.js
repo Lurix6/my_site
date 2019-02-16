@@ -3,7 +3,7 @@ import {mapToArr} from '../helper/'
 
 const musicsGetter = state => state.musics
 const searchDate = state => state.search
-const allFriends = state => state.accounts
+const allFriends = state => mapToArr(state.accounts)
 const friendsFilter = state => state.friendsFilter
 const groupsGetter = state => mapToArr(state.communities)
 const filterGroup = state =>  state.filters
