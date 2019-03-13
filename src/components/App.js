@@ -23,7 +23,6 @@ class App extends Component {
         <Header openDrawer={() => this.setState({isDrawerOpen:true})}/>
       <div className="siteBody">
             <Menu isDrawerOpen={this.state.isDrawerOpen}  clouseDrawer={() => this.setState({isDrawerOpen:false})} />
-
                 <Route path='/profil/id/:id' component={User}/>
                 <Route exact  path='/profil/myProfile' component={User}/>
                 <Route path='/profil/settings' component={Settings}/>

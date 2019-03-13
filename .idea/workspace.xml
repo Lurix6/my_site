@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24e1db6e-3637-4b99-8334-220437c0ac1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Acount/AddPhotoDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Acount/AddPhotoDialog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Acount/NewPostElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Acount/NewPostElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Acount/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Acount/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Acount/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Acount/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DB.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Settings/General.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/General.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/music/curentMusic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/music/curentMusic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/profile/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/profile/login.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Acount/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="164" column="19" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="19" />
+            <state relative-caret-position="2265">
+              <caret line="170" column="19" selection-start-line="170" selection-start-column="19" selection-end-line="170" selection-end-column="19" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -46,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/DB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7545">
-              <caret line="503" selection-start-line="503" selection-end-line="503" />
+            <state relative-caret-position="8055">
+              <caret line="537" selection-start-line="537" selection-end-line="537" />
             </state>
           </provider>
         </entry>
@@ -55,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Acount/NewPostElement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="30" column="92" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
+            <state relative-caret-position="4275">
+              <caret line="309" selection-start-line="309" selection-end-line="309" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -87,11 +91,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="576" />
-    <option name="y" value="95" />
-    <option name="width" value="650" />
-    <option name="height" value="741" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="1299" />
+    <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -212,11 +216,12 @@
       <workItem from="1547458037025" duration="22856000" />
       <workItem from="1547655058576" duration="5869000" />
       <workItem from="1547669587632" duration="1318000" />
+      <workItem from="1552156300644" duration="1124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107929000" />
+    <option name="totallyTimeSpent" value="109053000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -228,7 +233,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="576" y="95" width="650" height="741" extended-state="0" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837133" weight="0.36044657" />
       <window_info id="Structure" order="1" sideWeight="0.50162864" side_tool="true" weight="0.11520376" />
@@ -244,7 +249,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.47058824" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.46905538" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -489,8 +494,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Acount/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="164" column="19" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="19" />
+        <state relative-caret-position="2265">
+          <caret line="170" column="19" selection-start-line="170" selection-start-column="19" selection-end-line="170" selection-end-column="19" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -508,15 +513,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DB.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7545">
-          <caret line="503" selection-start-line="503" selection-end-line="503" />
+        <state relative-caret-position="8055">
+          <caret line="537" selection-start-line="537" selection-end-line="537" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Acount/NewPostElement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="30" column="92" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
+        <state relative-caret-position="4275">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

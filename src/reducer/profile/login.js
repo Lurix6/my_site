@@ -1,5 +1,4 @@
-import {LOGIN_MAIN_PROFILE, CHANGE_SITE_STYLE,
-  CHANGE_PRIVATE_DATA_MAIN_PROFILE,
+import {LOGIN_MAIN_PROFILE, CHANGE_PRIVATE_DATA_MAIN_PROFILE,
   LOGOUT_MAIN_PROFILE} from '../../constants'
 
   const defaultLogin ={
@@ -42,8 +41,6 @@ export default ( loginState = defaultLogin , action) => {
       case LOGOUT_MAIN_PROFILE: return null
       case LOGIN_MAIN_PROFILE: return payload.mainProfil
       case CHANGE_PRIVATE_DATA_MAIN_PROFILE: return {...loginState, firstName: payload.props.firstName, lastName: payload.props.lastName, personalDate: {...loginState.personalDate, birthday: payload.props.birthday, city: payload.props.city, sex: payload.props.sex}}
-
-        break;
     }
 
     return loginState

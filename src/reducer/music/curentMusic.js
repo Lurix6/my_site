@@ -1,4 +1,4 @@
-import {CHANGE_CARENT_MUSIC, CHANGE_CURENT_MUSIC_CATEGORY} from '../../constants'
+import {CHANGE_CARENT_MUSIC} from '../../constants'
 
 const defaultProps = {
     music: {

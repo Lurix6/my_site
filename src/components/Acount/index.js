@@ -7,12 +7,8 @@ import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Icon from '@material-ui/core/Icon'
 import Button from '@material-ui/core/Button';
-import Moment from 'react-moment';
 import Divider from '@material-ui/core/Divider'
 import GridList from '@material-ui/core/GridList';
-import Avatar from '@material-ui/core/Avatar';
-import InputBase from '@material-ui/core/InputBase';
-import Style from 'style-it';
 import Post from './Post'
 import NewPostElement from './NewPostElement'
 import { postImg } from '../DB'

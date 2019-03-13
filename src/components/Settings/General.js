@@ -20,7 +20,7 @@ class General extends React.Component {
     }
   }
 
-  render (){  
+  render (){
     const styleList = {
           btn1:{background: 'url(https://site-made-in.odessa.ua/website-image/QIEmajk4RGw/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE-%D1%84%D0%BE%D0%BD-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B0%D0%B9%D1%82%D0%B0-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD.jpg)  no-repeat'},
           btn2:{background: 'url(https://i.ytimg.com/vi/w9T97fRu3qc/maxresdefault.jpg)'},
@@ -69,7 +69,11 @@ class General extends React.Component {
 
 
   saveChange = () => {
-      this.props.changePrivateDataMainProfile({firstName : this.state.requred.firstName, lastName: this.state.requred.lastName, birthday: this.state.birthday, city: this.state.city, sex: this.state.sex})
+      const newLoginPerson = {...this.props.loginProfil ,firstName : this.state.requred.firstName, lastName: this.state.requred.lastName, birthday: this.state.birthday, city: this.state.city, sex: this.state.sex}
+      console.log(' new login person ',newLoginPerson)
+      this.props.changePrivateDataMainProfile(newLoginPerson)
+      localStorage.setItem('loginedUser', JSON.stringify(newLoginPerson));
+
   }
 
   changeSex = (ev) => {

@@ -37,20 +37,38 @@ class Post extends React.Component {
                         </div>
                       </div>
 
-                    {post.simplePost ?
+                    {post.postCategory === 'simple' ?
                               <div>
                                   <div style={{margin: '15px 0 15px 15px' }}>
                                       {post.text}
                                   </div>
                               </div>
-                              :
-                              <div>
-                                  <div  style={{margin: '15px 0' ,width: '100%', height: '100%', position: 'absolute', top: '0', left: '0' ,backgroundImage: String('url('+ post.selectedImg +')'),  position: 'relative' ,opacity: '1', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' ,color: 'black' ,  minHeight: '400px', maxHeight: '900px' ,  backgroundPosition: 'center'}} alt="">
-                                      <div style={{textAlign: 'center' ,fontSize: '40px' ,width: '50%', height: '40%', position: 'absolute', top: '30%', left: '50%',  margin: '0 0 0 -25%'}}>
-                                                {post.text}
-                                      </div>
-                                  </div>
-                                  </div>
+                              :(
+                                (post.postCategory === 'img' && typeof(post.selectedImg) == 'object' ) ?
+                                    <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}} >
+                                        {post.text}
+                                        { post.selectedImg.map((el , index) => <div key={index} style={{margin: '15px 0' ,width: index < 2 ? '48%' : String((100/(post.selectedImg.length-2)-2) + '%'), height: index < 2 ? 'auto' : String(100/(post.selectedImg.length-2) + '%'), position: 'absolute', top: '0', left: '0' ,backgroundImage: String('url('+ el +')'),  position: 'relative' ,opacity: '1', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' ,color: 'black' ,  minHeight: '400px', maxHeight: '900px' ,  backgroundPosition: 'center'}} alt=""></div> )
+                                        }
+                                    </div>
+                                :(
+                                    (post.postCategory === 'img' && typeof(post.selectedImg) == 'string' ) ?
+
+                                    <div>
+                                        {post.text}
+                                        <div  style={{margin: '15px 0' ,width: '100%', height: '100%', position: 'absolute', top: '0', left: '0' ,backgroundImage: String('url('+ post.selectedImg +')'),  position: 'relative' ,opacity: '1', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' ,color: 'black' ,  minHeight: '400px', maxHeight: '900px' ,  backgroundPosition: 'center'}} alt=""></div>
+                                    </div>
+
+                                    :
+
+                                    <div>
+                                        <div  style={{margin: '15px 0' ,width: '100%', height: '100%', position: 'absolute', top: '0', left: '0' ,backgroundImage: String('url('+ post.selectedImg +')'),  position: 'relative' ,opacity: '1', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' ,color: 'black' ,  minHeight: '400px', maxHeight: '900px' ,  backgroundPosition: 'center'}} alt="">
+                                            <div style={{textAlign: 'center' ,fontSize: '40px' ,width: '50%', height: '40%', position: 'absolute', top: '30%', left: '50%',  margin: '0 0 0 -25%'}}>
+                                                      {post.text}
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                              )
                         }
 
 
